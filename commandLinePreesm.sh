@@ -54,7 +54,7 @@ jdk_version() {
 
 JAVA_VERSION=$(jdk_version)
 
-if [ "$JAVA_VERSION" == "no_java" ];
+if [ "$JAVA_VERSION" == "no_java" ]; then
   echo "Error: could not locate java"
   exit 1
 fi
