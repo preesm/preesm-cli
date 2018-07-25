@@ -23,6 +23,9 @@ SCENARIO=${4}
 PROJECT=$(cat $APPDIR/.project | grep -oPm1 "(?<=<name>)[^<]+")
 WORKSPACE=$(mktemp -d --suffix=_preesm-workspace)
 
+
+
+
 echo ""
 echo "***START*** $(date -R)"
 echo ""
@@ -30,13 +33,13 @@ echo ""
 echo "Init workspace and import project"
 echo ""
 
-${PREESMDIR}/eclipsec -nosplash -consolelog -data ${WORKSPACE} -application org.eclipse.cdt.managedbuilder.core.headlessbuild -importAll ${APPDIR}
+${PREESMDIR}/eclipse -nosplash -consolelog -data ${WORKSPACE} -application org.eclipse.cdt.managedbuilder.core.headlessbuild -importAll ${APPDIR}
 
 echo ""
 echo "Run workflow from project $PROJECT"
 echo ""
 
-${PREESMDIR}/eclipsec -nosplash -consolelog -data ${WORKSPACE} -application org.ietr.preesm.cli.workflowCli ${PROJECT} -w ${WORKFLOW} -s ${SCENARIO}
+${PREESMDIR}/eclipse -nosplash -consolelog -data ${WORKSPACE} -application org.ietr.preesm.cli.workflowCli ${PROJECT} -w ${WORKFLOW} -s ${SCENARIO}
 
 echo ""
 echo "***END*** $(date -R)"
