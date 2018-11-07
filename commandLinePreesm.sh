@@ -77,13 +77,13 @@ echo ""
 echo "Init workspace and import project"
 echo ""
 
-${PREESMEXEC} -nosplash -consolelog -data ${WORKSPACE} -application org.eclipse.cdt.managedbuilder.core.headlessbuild -importAll ${APPDIR}
+${PREESMEXEC} --launcher.suppressErrors -nosplash -consolelog -data ${WORKSPACE} -application org.eclipse.cdt.managedbuilder.core.headlessbuild -importAll ${APPDIR}
 
 echo ""
 echo "Run workflow from project $PROJECT"
 echo ""
 
-${PREESMEXEC} -nosplash -consolelog -data ${WORKSPACE} -application org.ietr.preesm.cli.workflowCli ${PROJECT} -w ${WORKFLOW} -s ${SCENARIO}
+${PREESMEXEC} --launcher.suppressErrors -nosplash -consolelog -data ${WORKSPACE} -application org.ietr.preesm.cli.workflowCli ${PROJECT} -w ${WORKFLOW} -s ${SCENARIO}
 
 echo ""
 echo "***END*** $(date -R)"
