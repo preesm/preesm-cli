@@ -1,5 +1,4 @@
-
-#!/bin/bash
+#!/bin/bash -eu
 
 ## the path to the Preesm binary directory
 PREESMDIR=${1}
@@ -30,6 +29,7 @@ jdk_version() {
   then
     result=no_java
   else
+    result=
     for line in $lines; do
       if [[ (-z $result) && ($line = *"version \""*) ]]
       then
