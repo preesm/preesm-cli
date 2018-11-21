@@ -83,7 +83,7 @@ echo ""
 echo "Run workflow from project $PROJECT"
 echo ""
 
-${PREESMEXEC} --launcher.suppressErrors -nosplash -consolelog -data ${WORKSPACE} -application org.ietr.preesm.cli.workflowCli ${PROJECT} -w ${WORKFLOW} -s ${SCENARIO}
+${PREESMEXEC} --launcher.suppressErrors -nosplash -consolelog -data ${WORKSPACE} -application org.preesm.cli.workflowCli ${PROJECT} -d -w ${WORKFLOW} -s ${SCENARIO}
 
 echo ""
 echo "***END*** $(date -R)"
