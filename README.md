@@ -31,3 +31,17 @@ call .\commandLinePreesm.bat "E:\preesm_CLI\preesm-2.13.0" "E:\preesm_CLI\preesm
 ```
 ./commandLinePreesm.sh "/tmp/preesm_CLI/preesm-2.13.0" "/tmp/preesm_CLI/preesm-tuto/" "Codegen.workflow" "03-parasobel_4core.scenario"
 ```
+
+### Cygwin
+
+Note: 
+  * Eclipse path can be either windows-like or unix-like;
+  * Project path should be Windows-like, with backslashes : `<Drive Letter>:\path\to\project`
+
+```
+./commandLinePreesm.sh "E:\preesm_CLI\preesm-2.13.0" "E:\preesm_CLI\preesm-tuto" "Codegen.workflow" "03-parasobel_4core.scenario"
+
+## OR
+
+./commandLinePreesm.sh "/cygdrive/e/preesm_CLI/preesm-2.13.0" "E:\preesm_CLI\preesm-tuto" "Codegen.workflow" "03-parasobel_4core.scenario"
+```
